@@ -22,6 +22,9 @@
     "name": "Richard Sands"
   },
   "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.7.0"
+  },
   "bugs": {
     "url": "https://github.com/boldrocket/node-semantria/issues"
   },
