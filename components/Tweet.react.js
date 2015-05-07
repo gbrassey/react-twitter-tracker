@@ -6,7 +6,7 @@ module.exports = Tweet = React.createClass({
   render: function(){
     var tweet = this.props.tweet;
     return (
-      <li className={"tweet " + tweet.sentimentText + (tweet.active ? ' active' : '')}>
+      <li className={"tweet " + tweet.sentimentText + (tweet.active ? ' active' : '')} data-sentiment-score={tweet.sentimentScore}>
         <img src={tweet.avatar} className="avatar"/>
         <blockquote>
           <cite>
