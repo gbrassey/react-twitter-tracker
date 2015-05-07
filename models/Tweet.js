@@ -10,7 +10,7 @@ var schema = new mongoose.Schema({
   , date       : Date
   , screenname : String
   , sentimentText   : String
-  , sentimentScore  : String
+  , sentimentScore  : Number
 });
 
 // Create a static getTweets method to return tweet data from the db
