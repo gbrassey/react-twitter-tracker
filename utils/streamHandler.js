@@ -1,8 +1,8 @@
 var Tweet = require('../models/Tweet'),
-    Semantria = require('./semantria'),
+    Semantria = require('semantria-node'),
     config = require('../config').semantria;
 
-var SemantriaSession = new Semantria.Session(config.consumer_key, config.consumer_secret, 'reactApp');;
+var SemantriaSession = new Semantria.Session(config.consumer_key, config.consumer_secret, 'reactApp');
 
 module.exports = function(stream, io){
 
@@ -51,6 +51,7 @@ function getSentiment (err, tweet, callback) {
 
   if (result === 202) {
     var data = SemantriaSession.getDocument(tweet.twid);
+
     tweet.sentimentScore = data.sentiment_score;
     tweet.sentimentText = data.sentiment_polarity;
   }
