@@ -3,7 +3,7 @@ var express = require('express'),
   exphbs = require('express-handlebars'),
   http = require('http'),
   mongoose = require('mongoose'),
-  twitter = require('ntwitter'),
+  twitter = require('twitter'),
   routes = require('./routes'),
   config = require('./config'),
   streamHandler = require('./utils/streamHandler');
@@ -43,6 +43,6 @@ var server = http.createServer(app).listen(port, function() {
 var io = require('socket.io').listen(server);
 
 // Set a stream listener for tweets matching tracking keywords
-twit.stream('statuses/filter',{ track: 'milifandom'}, function(stream){
+twit.stream('statuses/filter',{ track: 'nygovcuomo'}, function(stream){
   streamHandler(stream, io);
 });

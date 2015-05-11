@@ -21,7 +21,7 @@ module.exports = function(stream, io){
   });
 
   stream.on('error', function (err) {
-    console.error(err);
+    console.error('error: ' + err);
   });
 
 };
