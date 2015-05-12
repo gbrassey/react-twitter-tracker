@@ -139,10 +139,12 @@ footer .update-message
 
 .tweet.positive {
     background-color: green;
+    box-shadow: 0 3px 0 green;
 }
 
 .tweet.negative {
     background-color: red;
+    box-shadow: 0 3px 0 red;
 }
 
 .tweet.active
